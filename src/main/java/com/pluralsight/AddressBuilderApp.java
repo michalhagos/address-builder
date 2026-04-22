@@ -7,7 +7,7 @@ public class AddressBuilderApp {
 
     public static void main(String[] args) {
         System.out.println("Please Provide the following information");
-
+// import a scanner to get the input and save them in variables.
         System.out.println("Full name: ");
         String fullName = theScanner.nextLine();
 
@@ -35,7 +35,7 @@ public class AddressBuilderApp {
         System.out.println("Shipping Zip: ");
         String shippingZip = theScanner.nextLine();
 
-
+// create a new Billing Address string builder  and append all the address feilds that need to be added
         StringBuilder billingAddress = new StringBuilder();
 
         billingAddress.append(billingStreet);
@@ -51,7 +51,7 @@ public class AddressBuilderApp {
         billingAddress.append(" ");
 
         billingAddress.append(billingZip);
-
+// create a new shipping Address string builder  and append all the address fields that need to be added
         StringBuilder shippingAddress = new StringBuilder();
         shippingAddress.append(shippingStreet);
 
@@ -67,8 +67,10 @@ public class AddressBuilderApp {
 
         shippingAddress.append(shippingZip);
 
+// print full name first
         System.out.println(fullName);
 
+// print out the appended strings
         String billingAddress1 = billingAddress.toString();
         System.out.println(" Billing Address : " + billingAddress1);
 
